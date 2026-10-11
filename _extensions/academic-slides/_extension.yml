@@ -1,0 +1,18 @@
+title: Academic Typst Slides
+author: Local template
+version: 1.0.0
+quarto-required: ">=1.9.0"
+contributes:
+  formats:
+    typst:
+      template-partials:
+        - typst-template.typ
+        - typst-show.typ
+      filters:
+        - slides.lua
+      keep-typ: true
+      toc: false
+      number-sections: false
+      mainfont: Arial
+      codefont: Menlo
+      mathfont: STIX Two Math

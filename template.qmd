@@ -1,0 +1,65 @@
+---
+title: "A Fast Academic Presentation"
+format:
+  academic-slides-typst: default
+author: "Your Name"
+date: "2026-10-11"
+slide-aspect: "4:3"
+slide-numbers: false
+---
+
+## Motivation
+
+- PDF slides compiled with Typst.
+- Dark blue titles and restrained gray accents.
+  - Second-level items use a dash.
+    - Third-level items use a square.
+- [A highlighted result]{.al} with [positive]{.alg}, [negative]{.alr}, and [neutral]{.alb} alerts.
+
+# Main Results
+
+## Mathematics and propositions
+
+::: {.proposition title="Proposition 1"}
+For independent observations with finite variance,
+
+$$
+\operatorname{Var}(\bar{X}) = \frac{\sigma^2}{n}.
+$$
+:::
+
+Typst supports mathematical notation through Pandoc's conversion.
+
+## Tables and code
+
+| Method | Engine | Output |
+|:-------|:-------|:-------|
+| Original | LaTeX | PDF |
+| Converted | Typst | PDF |
+
+```python
+estimate = sum(observations) / len(observations)
+```
+
+## Two columns
+
+```{=typst}
+#grid(columns: (1fr, 1fr), gutter: 6mm,
+  [#theme-block(title: [Assumption])[Observations are independent.]],
+  [#theme-block(title: [Remark])[Split dense content over multiple slides.]],
+)
+```
+
+## Pictograms and links
+
+```{=typst}
+#up Improvement #linebreak()
+#down Reduction #linebreak()
+#then Next step #linebreak()
+#so Implication #parbreak()
+```
+
+[Quarto Typst documentation](https://quarto.org/docs/output-formats/typst.html)
+
+::: {.last-slide}
+:::
